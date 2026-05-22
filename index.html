@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SafeNest - Mental Wellness Platform</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="particles"></div>
+
+  <nav>
+
+    <h1>SafeNest 🌿</h1>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#moods">Mood</a></li>
+      <li><a href="#breathing">Breathing</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#meditation">Meditation</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#exercise">Exercise</a></li>
+      <li><a href="#journal">Journal</a></li>
+    
+<li><a href="#quotes">Quotes</a></li>
+<li><a href="#sleep">Sleep</a></li>
+<li><a href="#routine">Routine</a></li>
+<li><a href="#health">Lifestyle</a></li>
+<li><a href="#mind">Calm Mind</a></li>
+
+<li><a href="#chat">AI Support</a></li>
+<li><a href="#community">Community</a></li>
+    </ul>
+
+    <button class="theme-btn" onclick="toggleTheme()">
+      Dark/Light
+    </button>
+
+  </nav>
+
+  <section class="hero" id="home">
+
+    <div class="hero-text">
+
+      <h1>Your Calm Safe Space 💜</h1>
+
+      <p>
+        A complete wellness platform with meditation, stress relief activities, 
+        calming music, journaling, emotional support, healthy lifestyle tips, and 
+        relaxing experiences.
+
+      </p>
+<h3 id="greeting"></h3>
+
+      <button onclick="welcomeMessage()">
+        Start Healing
+      </button>
+
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Nature">
+
+  </section>
+
+  <section id="moods">
+
+    <h2>Mood Therapy 🌸</h2>
+
+    <div class="mood-container">
+
+      <div class="card">
+        <h3>😔 Sad</h3>
+        <button onclick="showMood('sad')">Select</button>
+      </div>
+
+      <div class="card">
+        <h3>😰 Anxious</h3>
+        <button onclick="showMood('anxious')">Select</button>
+      </div>
+
+      <div class="card">
+        <h3>😡 Angry</h3>
+        <button onclick="showMood('angry')">Select</button>
+      </div>
+
+      <div class="card">
+        <h3>😊 Happy</h3>
+        <button onclick="showMood('happy')">Select</button>
+      </div>
+
+    </div>
+
+    <div id="mood-result"></div>
+
+  </section>
+
+  <section id="breathing">
+
+    <h2>Breathing Exercise 🌬️</h2>
+
+    <div class="breathing-circle">
+      Breathe
+    </div>
+
+    <div style="text-align:center;">
+
+      <button class="theme-btn" onclick="increaseCounter()">
+        Start Session
+      </button>
+
+      <button class="theme-btn" onclick="toggleTips()">
+        Show/Hide Tips
+      </button>
+
+    </div>
+
+    <div class="counter">
+      Sessions Completed:
+      <span id="count">0</span>
+    </div>
+
+    <div id="tips" style="display:none; text-align:center; margin-top:30px; line-height:2;">
+      <p>🌿 Box Breathing 🌿</p>
+      <p>🌿 Inhale for 4 seconds</p>
+      <p>🌿 Hold for 4 seconds</p>
+      <p>🌿 Exhale for 4 seconds</p>
+      <p>🌿 Relax your shoulders</p>
+
+    </div>
+
+  </section>
+
+  <section id="music">
+
+    <h2>Calming Music Therapy 🎵</h2>
+
+    <div class="mood-container">
+
+      <div class="card">
+
+        <h3>🌧️ Rain Sounds</h3>
+
+        <p>Relax with peaceful rain ambience.</p>
+
+        <a href="https://youtu.be/q76bMs-NwRk?si=mKEPj02P3FhHH3EJ" target="_blank">
+          <button>Listen</button>
+        </a>
+
+      </div>
+
+      <div class="card">
+
+        <h3>🎹 Flute</h3>
+
+        <p>Gentle flute music for stress relief.</p>
+
+        <a href="https://youtu.be/RnnAeESINxc?si=FMbVsVGkBoPM0vKC" target="_blank">
+          <button>Listen</button>
+        </a>
+
+      </div>
+
+      <div class="card">
+
+        <h3>🌿 Relax</h3>
+
+        <p>Calm Your Soul</p>
+
+        <a href="https://youtu.be/9M87rfauwI0?si=Q4Y1urLVXGy8I0_V" target="_blank">
+          <button>Listen</button>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="meditation">
+
+    <h2>How To Meditate 🧘</h2>
+
+    <div class="card" style="max-width:800px; margin:auto; line-height:2;">
+
+      <h3>Simple Beginner Meditation</h3>
+
+      <p>1️⃣ Sit comfortably.</p>
+      <p>2️⃣ Relax your shoulders.</p>
+      <p>3️⃣ Close your eyes gently.</p>
+      <p>4️⃣ Focus on your breathing.</p>
+      <p>5️⃣ Inhale deeply through your nose.</p>
+      <p>6️⃣ Exhale slowly through your mouth.</p>
+      <p>7️⃣ Continue for 5 minutes daily.</p>
+
+      <a href="https://meditation.quantummethod.org.bd/bn" target="_blank">
+        <button>Learn More</button>
+      </a>
+
+    </div>
+
+  </section>
+
+  <section id="activities">
+
+    <h2>Activities To Calm Yourself 🌸</h2>
+
+    <div class="mood-container">
+
+      <div class="card">
+        <h3>📖 Journaling</h3>
+        <p>Writing thoughts helps release emotional stress.</p>
+      </div>
+
+      <div class="card">
+        <h3>🚶 Slow Walking</h3>
+        <p>Walking slowly outdoors relaxes the nervous system.</p>
+      </div>
+
+      <div class="card">
+        <h3>🎨 Drawing</h3>
+        <p>Creative activities calm the brain and improve mood.</p>
+      </div>
+
+      <div class="card">
+        <h3>☕ Tea Time</h3>
+        <p>Warm drinks and quiet moments reduce tension naturally.</p>
+      </div>
+
+    </div>
+
+  </section>
+<section id="sleep">
+
+  <h2>Healthy Sleep Tips 🌙</h2>
+
+  <div class="mood-container">
+
+    <div class="card">
+
+      <h3>😴 7-8 Hours Sleep</h3>
+
+      <p>
+        Good sleep improves focus, memory,
+        mood, immunity, and mental wellness.
+      </p>
+ <a href="https://youtu.be/jKBIhM5L4xI?si=EsRreJqvVpGTEgqG" target="_blank">
+        <button>Learn More</button>
+      </a>
+
+    </div>
+
+    <div class="card">
+
+      <h3>📵 Avoid Doom Scrolling</h3>
+
+      <p>
+        Excess scrolling at night increases stress,
+        anxiety, and poor sleep quality.
+      </p>
+<a href="https://youtu.be/JNk2qBF09qc?si=98YleBpNpUwtbfSp" target="_blank">
+        <button>Learn More</button>
+      </a>
+    </div>
+
+    <div class="card">
+
+      <h3> 🌿🌙 Eat light and early at night</h3>
+
+      <p>
+        Helps your body relax, digest properly, 
+              and sleep better at night.
+
+      </p>
+<a href="https://youtu.be/JhRqDqbyJ9o?si=-J_aj0DJXVylRggG" target="_blank">
+        <button>Learn More</button>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+<section>
+
+  <h2>Your Wellness Progress 🔥</h2>
+
+  <div class="card"
+  style="max-width:700px; margin:auto;">
+
+    <h3>Self Care Progress</h3>
+
+    <div
+    style="
+    background:#ddd;
+    border-radius:30px;
+    overflow:hidden;
+    ">
+
+      <div id="progressBar"
+
+      style="
+      width:0%;
+      background:#7c3aed;
+      color:white;
+      padding:15px;
+      transition:0.5s;
+      ">
+
+        0%
+
+      </div>
+
+    </div>
+
+    <button
+    onclick="increaseProgress()"
+    class="theme-btn"
+    style="margin-top:20px;">
+
+      Improve Progress
+
+    </button>
+
+  </div>
+
+</section>
+<section id="chat">
+
+  <h2>AI Wellness Support 💬</h2>
+
+  <div class="card"
+  style="max-width:700px; margin:auto;">
+
+    <input
+    type="text"
+    id="userMessage"
+    placeholder="How are you feeling today?">
+
+    <button
+    onclick="chatReply()"
+    class="theme-btn">
+
+      Send
+
+    </button>
+
+    <p
+    id="chatResponse"
+    style="margin-top:20px; line-height:2;">
+    </p>
+
+  </div>
+
+</section>
+
+<section id="health">
+
+  <h2>Think Well, Stay Well! 🌻</h2>
+
+  <div class="mood-container">
+
+    <div class="card">
+
+      <h3> 🧠 Positive Mindset</h3>
+
+      <p>
+        A positive mindset helps you stay calm,
+             motivated, and stronger during
+               difficult moments in life.
+      </p>
+ <a
+    href="https://youtu.be/SpmBTQ56BqA?si=7ZFx-MNgOSGlKt4F"
+    target="_blank">
+
+      <button class="theme-btn">
+
+       Watch
+      </button>
+
+    </a>
+
+    </div>
+
+    <div class="card">
+
+      <h3> 🚀 Be Pro-active!</h3>
+
+      <p>Focus on solutions and take action 
+           before problems control you.
+      </p>
+<a
+    href="https://youtu.be/S4iRSZnWRMk?si=M-pLrwxQ9cGi6kEZ"
+    target="_blank">
+
+      <button class="theme-btn">
+
+       Watch
+      </button>
+
+    </a>
+
+    </div>
+
+    
+
+  </div>
+
+  <div style="text-align:center; margin-top:30px;">
+
+    
+
+  </div>
+
+</section>
+<section id="mind">
+
+  <h2>Keep Your Mind Calm 🌿</h2>
+
+  <div class="card"
+  style="max-width:900px;
+  margin:auto;
+  line-height:2;">
+
+    <p>✨ Avoid negative self-talk.</p>
+
+    <p>
+      ✨ Stop replaying negative
+      incidents repeatedly.
+    </p>
+
+    <p>
+      ✨ Focus on progress,
+      not perfection.
+    </p>
+
+    <p>
+      ✨ Reduce doom scrolling
+      before sleep.
+    </p>
+
+    
+  
+
+  </div>
+
+</section>
+<section id="routine">
+
+  <h2>Daily Routine 🌞</h2>
+
+  <div class="card"
+  style="max-width:900px;
+  margin:auto;
+  line-height:2;">
+
+    <p>☀️ Wake up early</p>
+
+    <p>💧 Drink water</p>
+
+    <p>🧘 Stretch or meditate</p>
+
+    <p>🍳 Eat healthy breakfast</p>
+
+    <p>📚 Study with breaks</p>
+
+    <p>🚶 Exercise daily</p>
+
+    <p>📵 Avoid screens before sleep</p>
+
+    <p>😴 Sleep 7-8 hours</p>
+
+  </div>
+
+</section>
+
+  <section id="exercise">
+
+    <h2>Exercises For Mental Wellness 🏃</h2>
+
+    <div class="mood-container">
+
+      <div class="card">
+
+        <h3>🧘 Easiest Exercise</h3>
+
+        <p>Reduces body tension and improves relaxation.</p>
+
+        <a href="https://youtube.com/shorts/ktws0G1p4a8?si=A1v_xA7y3NOXiLLR" target="_blank">
+          <button>Watch</button>
+        </a>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Laugh!</h3>
+
+        <p>Laughter is the best exercise for the mind and soul 
+      — it reduces stress, boosts mood, and helps you feel relaxed.
+</p>
+
+        <a href="https://youtu.be/SDSkBOSMaM0?si=lwpbXwKPHo-CnFg1" target="_blank">
+          <button>Watch</button>
+        </a>
+
+      </div>
+
+      <div class="card">
+
+        <h3>🧍 Yoga</h3>
+
+        <p>Improves breathing and emotional balance.</p>
+
+        <a href="https://yoga.quantummethod.org.bd/bn" target="_blank">
+          <button>Guide</button>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="journal" id="journal">
+
+    <h2>Write Out Negativity ✍️</h2>
+
+    <textarea id="journalText" placeholder="Write your feelings..."></textarea>
+
+    <button onclick="saveJournal()">
+      Let It Go
+    </button>
+
+    <div class="entries" id="entries"></div>
+
+  </section>
+
+  <section>
+
+    <h2>Stress Relief Bubble Game 🎮</h2>
+
+    <div class="game-box">
+
+      <div class="bubble" onclick="popBubble()">
+        POP
+      </div>
+
+      <h3>
+        Bubbles Popped:
+        <span id="bubbleCount">0</span>
+      </h3>
+
+    </div>
+
+  </section>
+
+
+
+<section id="quotes">
+
+  <h2>✨</h2>
+
+  <div class="card" style="max-width:700px; margin:auto; text-align:center;">
+
+    <h3 id="quote">
+      Click below to check today's weather 🌤️
+    </h3>
+
+    <button onclick="getQuote()">
+      Click
+    </button>
+
+  </div>
+
+</section>
+  <section id="community">
+
+    <h2>Join Our Community 🤍</h2>
+
+    <form id="communityForm">
+
+      <input type="text" id="name" placeholder="Full Name">
+
+      <input type="email" id="email" placeholder="Email">
+
+      <input type="password" id="password" placeholder="Password">
+
+      <select id="mood">
+
+        <option value="">Select Mood</option>
+        <option>Happy</option>
+        <option>Sad</option>
+        <option>Anxious</option>
+        <option>Angry</option>
+
+      </select>
+
+      <div>
+
+       <h3>Stress Level</h3><br>
+
+
+        <label>
+          <input type="radio" name="stress"> Low
+        </label>
+
+        <label>
+          <input type="radio" name="stress"> Medium
+        </label>
+
+        <label>
+          <input type="radio" name="stress"> High
+        </label>
+      </div>
+
+      <div>
+
+        <h3>Activities You Like</h3><br>
+
+        <label>
+          <input type="checkbox"> Meditation
+        </label>
+
+        <label>
+          <input type="checkbox"> Music
+        </label>
+
+        <label>
+          <input type="checkbox"> Journaling
+        </label>
+
+      </div>
+
+      <button type="submit">
+        Join Community
+      </button>
+
+      <div class="message" id="formMessage"></div>
+
+    </form>
+
+  </section>
+<section id="login">
+
+  <h2>Login Portal 🔐</h2>
+
+  <form id="loginForm">
+
+    <input type="email" id="loginEmail" placeholder="Enter Email">
+
+    <input type="password" id="loginPassword" placeholder="Enter Password">
+
+    <button type="submit">
+      Login
+    </button>
+
+    <button type="button" onclick="logoutUser()">
+      Logout
+    </button>
+
+    <div class="message" id="loginMessage"></div>
+
+  </form>
+
+</section>
+
+  <footer>
+
+    <p>
+      SafeNest © 2026 | Mental Wellness Platform 🌿
+    </p>
+
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>
